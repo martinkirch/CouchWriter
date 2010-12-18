@@ -1,0 +1,37 @@
+body {
+ 	background : white;
+ 	font-family : Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+}
+
+a {	
+	color : #666; 
+	text-decoration : underline;
+}
+
+a:hover {
+	color : #999; 
+	text-decoration : none;
+}
+
+h1, h2, form, fieldset, input, label {
+	font-weight : normal;
+}
+
+#content {
+	font-family : Garamond, ‘Hoefler Text’, ‘Times New Roman’, Times, serif;
+	font-size:120%;
+}
+
+#top a {
+	color:#444;
+	text-decoration:none;
+}
+
+#top a:hover {
+	color:black;
+}
+
+#footer {
+	color:#777;
+	font-size:80%;
+}
