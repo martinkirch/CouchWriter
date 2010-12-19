@@ -31,7 +31,20 @@ h1, h2, form, fieldset, input, label {
 	color:black;
 }
 
-#footer {
+#top form input[type=text] {
+  border: 1px solid #CCCCCC;
+  font-size: 100%;
+  padding: 0.1em;
+}
+
+#top form input[type=submit] {
+	border: 1px solid #CCCCCC;
+	background : #DDDDDD;
+  font-size: 100%;
+  padding: 0.1em;
+}
+
+#about {
 	color:#777;
 	font-size:80%;
 }

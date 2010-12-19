@@ -20,8 +20,11 @@ body {
 	position: fixed;
 	left: 0;
 	top: 0;
+	padding : 0.1em;
 	background: white;
 	border-bottom: 1px solid #ccc;
+	height:1.8em;
+	overflow:hidden;
 }
 
 #top h1 {
@@ -29,12 +32,17 @@ body {
 	margin: 0;
 	text-align : left;
 	font-size:100%;
+	position:absolute;
+	left:0;
 }
 
-#footer {
-	margin-top: 4em;
+#top form {
+	margin : 0 auto;
+}
+
+#about {
+	clear: both;
 	text-align : left;
-	padding: 3px 15px;
 }
 
 #sidebar {
@@ -46,5 +54,6 @@ body {
 }
 
 #account {
-  float:right;
+	position:absolute;
+	right:1em;
 }

@@ -5,13 +5,23 @@
 
     <link rel="stylesheet" href="style/layout.css" type="text/css">
     <link rel="stylesheet" href="style/style.css" type="text/css">
+		<link rel="stylesheet" href="style/jquery.gritter.css" type="text/css">
 	</head>
 	<body>
 
 		<div id="top">
 			<div id="account"></div>
 
-		   <h1>CouchWriter</h1>
+			<h1>CouchWriter</h1>
+			
+			<div id="saveForm"></div>
+		
+			<div id="about">
+				This will be CouchWriter :
+				<a href="http://www.aloha-editor.com/">Aloha editor</a> brought in a
+				<a href="http://couchapp.org">couchapp</a>
+				by Martin Kirchgessner &copy; 2010-2011
+			</div>
 		</div>
 
 		<div id="sidebar">
@@ -25,13 +35,6 @@
 			</div>
 		</div>
 
-		<div id="footer">
-			This will be CouchWriter :
-			<a href="http://www.aloha-editor.com/">Aloha editor</a> brought in a
-			<a href="http://couchapp.org">couchapp</a>
-			by Martin Kirchgessner &copy; 2010-2011
-		</div>
-   
 	</body>
 
 	<script type="text/javascript" src="aloha/aloha.js"></script>
@@ -53,6 +56,7 @@
 	<script type="text/javascript" src="vendor/couchapp/jquery.couch.app.util.js"></script>
 	<script type="text/javascript" src="vendor/couchapp/jquery.mustache.js"></script>
 	<script type="text/javascript" src="vendor/couchapp/jquery.evently.js"></script>
+	<script type="text/javascript" src="js/jquery.gritter.min.js"></script>
 	
   <script type="text/javascript" charset="utf-8">
     $.couch.app(function(app) {
@@ -60,6 +64,7 @@
       $("#profile").evently("profile", app);
       $.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
       $("#items").evently("items", app);
+			$("#saveForm").evently("saveForm", app);
     });
   </script>
 
