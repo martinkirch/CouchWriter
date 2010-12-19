@@ -41,8 +41,8 @@ GENTICS.Aloha.settings = {
 				'#title'	: [ 'ol' ], 
 				// all divs get OL
 				'div'		: [ 'ol' ], 
-				// content is a DIV. It would get only OL but with class .article it also gets UL.
-				'.article'	: [ 'ul' ]
+				// content is a DIV. It would get only OL but #content also gets UL.
+				'#content'	: [ 'ul' ]
 		  	}
 		},
 	 	"com.gentics.aloha.plugins.Link": {
@@ -76,8 +76,8 @@ GENTICS.Aloha.settings = {
 		 	// all elements with no specific configuration are not allowed to insert tables
 			config : [ ],
 		  	editables : {
-				// Allow insert tables only into .article
-				'.article'	: [ 'table' ] 
+				// Allow insert tables only into #content
+				'#content'	: [ 'table' ] 
 		  	}
 		}
   	}

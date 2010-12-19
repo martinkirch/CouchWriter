@@ -9,7 +9,8 @@ function () {
     success : function() {
       $.gritter.add({
 				title: 'Saved!',
-				text: '"' + doc._id +'" has been saved.'
+				text: '"' + doc._id +'" has been saved.',
+				time: 3000
 			});
     }
   });
