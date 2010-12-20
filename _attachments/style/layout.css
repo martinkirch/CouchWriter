@@ -6,7 +6,6 @@
 body {
 	text-align : center;
 	font : 1em Helvetica, sans-serif;
-  padding : 4px;
 }
 
 #page {
@@ -20,7 +19,7 @@ body {
 	position: fixed;
 	left: 0;
 	top: 0;
-	padding : 0.1em;
+	padding : 0.1em 1em;
 	background: white;
 	border-bottom: 1px solid #ccc;
 	height:1.8em;
@@ -28,7 +27,7 @@ body {
 }
 
 #top h1 {
-	padding : 3px 20px;
+	padding : 0.1em 1em;
 	margin: 0;
 	text-align : left;
 	font-size:100%;
@@ -36,8 +35,33 @@ body {
 	left:0;
 }
 
-#top form {
+#top .btnPullDown {
+	display:none;
+	
+	margin-left:10%;
+	margin-right:10%;
+	padding:0.1em 0.3em;
+	
+	background:white;
+	color:black;
+}
+
+#top .btnPullDown:hover {
+	background:black;
+	color:white;
+}
+
+#top:hover .btnPullDown {
+	display:inline;
+}
+
+#saveForm {
+	display:inline;
+}
+
+#saveForm form {
 	margin : 0 auto;
+	display:inline;
 }
 
 #about {

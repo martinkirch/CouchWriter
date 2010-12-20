@@ -1,5 +1,6 @@
 function () {
-	var form = this;
+	event.preventDefault();
+	
 	var doc = {
     created_at : new Date(),
 		content : $('#content').html(),
@@ -14,5 +15,4 @@ function () {
 			});
     }
   });
-  return false;
 };

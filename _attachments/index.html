@@ -14,7 +14,11 @@
 
 			<h1>CouchWriter</h1>
 			
+			<a class="btnPullDown" href="">v</a>
+			
 			<div id="saveForm"></div>
+			
+			<a class="btnPullDown" href="">v</a>
 		
 			<div id="about">
 				This will be CouchWriter :
@@ -65,6 +69,7 @@
       $.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
       $("#items").evently("items", app);
 			$("#saveForm").evently("saveForm", app);
+			$(".btnPullDown").evently("btnPullDown", app);
     });
   </script>
 
