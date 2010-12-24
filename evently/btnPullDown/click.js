@@ -7,14 +7,14 @@ function (event) {
 	
 	var futureHeight,futureOverflow;
 	
-	if ( $$(this).isUp ) {
-		$$(this).isUp  = false;
-		futureHeight   = '80%';
-		futureOverflow = 'auto';
-	} else {	
-		$$(this).isUp  = true;
+	if ( $$(this).isDown ) {
+		$$(this).isDown  = false;
 		futureHeight   = $$('#top').baseHeight
 		futureOverflow = 'hidden';
+	} else {
+		$$(this).isDown  = true;
+		futureHeight   = '80%';
+		futureOverflow = 'auto';
 	}
 	
 	$('#top').css('overflow', futureOverflow);

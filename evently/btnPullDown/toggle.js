@@ -1,7 +1,7 @@
 function () {
-	if ($$(this).isUp) {
-		$(this).html('v');
-	} else {
+	if ($$(this).isDown) {
 		$(this).html('^');
+	} else {
+		$(this).html('v');
 	}
 }
