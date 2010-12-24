@@ -63,9 +63,12 @@ body {
 	display:inline;
 }
 
+#docList {
+	clear: both;
+}
+
 #about {
 	margin-top: 3em;
-	clear: both;
 	text-align : left;
 }
 
