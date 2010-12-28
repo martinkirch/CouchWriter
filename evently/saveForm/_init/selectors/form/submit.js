@@ -1,4 +1,4 @@
-function () {
+function (event) {
 	event.preventDefault();
 	
 	var doc = {
