@@ -54,6 +54,11 @@ body {
 	display:inline;
 }
 
+#docList {
+	text-align:left;
+	padding:1em;
+}
+
 #saveForm {
 	display:inline;
 }
@@ -68,7 +73,7 @@ body {
 }
 
 #about {
-	margin-top: 3em;
+	padding:1em;
 	text-align : left;
 }
 

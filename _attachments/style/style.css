@@ -32,16 +32,37 @@ h1, h2, form, fieldset, input, label {
 }
 
 #top form input[type=text] {
-  border: 1px solid #CCCCCC;
+  border: 1px solid #ccc;
   font-size: 100%;
   padding: 0.1em;
 }
 
 #top form input[type=submit] {
-	border: 1px solid #CCCCCC;
-	background : #DDDDDD;
+	border: 1px solid #ccc;
+	background : #ddd;
   font-size: 100%;
   padding: 0.1em;
+}
+
+#docList .title {
+	font-size:2em;
+	letter-spacing:0.2em;
+}
+
+#docList .subtitle {
+	color:#ccc;
+	font-style:italic;
+	text-indent:2em;
+}
+
+#docList a {
+	display:block;
+	padding:0.1em 0.5em;
+} 
+
+#docList a:hover {
+	background:#888;
+	color:white;
 }
 
 #about {
