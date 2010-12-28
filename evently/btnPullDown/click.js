@@ -23,5 +23,11 @@ function (event) {
 		$('.btnPullDown').each(function() {
 			$(this).trigger('toggle');
 		});
+		
+		if ( $$('.btnPullDown').isDown ) {
+			$("#top").one('click', function () {
+				$('.btnPullDown').first().trigger('click');
+			});
+		}
 	});
 }
