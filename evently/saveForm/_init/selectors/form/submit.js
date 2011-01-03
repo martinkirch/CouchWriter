@@ -6,13 +6,27 @@ function (event) {
 		content : $('#content').html(),
 		_id : $('input[type=text]').val()
   };
+
+	if ($$('#content')._rev) {
+		doc._rev = $$('#content')._rev;
+	}
+
   $$(this).app.db.saveDoc(doc, {
-    success : function() {
-      $.gritter.add({
+    success : function(data) {
+			$.gritter.add({
 				title: 'Saved!',
-				text: '"' + doc._id +'" has been saved.',
+				text: '"' + data.id +'" has been saved.',
 				time: 3000
 			});
-    }
+		
+			$$('#content')._rev = data.rev;
+    }, 
+		error : function(status, error, reason) {
+			$.gritter.add({
+				title: 'ERROR',
+				text: "The document could not be saved : " + reason,
+				time: 3000
+			});
+		}
   });
 };
