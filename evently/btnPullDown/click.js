@@ -11,6 +11,9 @@ function (event) {
 		$$(this).isDown  = false;
 		futureHeight   = $$('#top').baseHeight
 		futureOverflow = 'hidden';
+		
+		$("#top").die('click');
+		
 	} else {
 		$$(this).isDown  = true;
 		futureHeight   = '80%';
@@ -25,8 +28,10 @@ function (event) {
 		});
 		
 		if ( $$('.btnPullDown').isDown ) {
-			$("#top").one('click', function () {
-				$('.btnPullDown').first().trigger('click');
+			$("#top").live('click', function (event) {
+				if ( event.target == this ) {
+					$('.btnPullDown').first().trigger('click');
+				}
 			});
 		}
 	});
