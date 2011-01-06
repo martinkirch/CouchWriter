@@ -14,11 +14,11 @@
 
 			<h1>CouchWriter</h1>
 			
-			<a class="btnPullDown" href="">v</a>
+			<a class="topPanelToggler" href="">v</a>
 			
 			<div id="saveForm"></div>
 			
-			<a class="btnPullDown" href="">v</a>
+			<a class="topPanelToggler" href="">v</a>
 			
 			<div id="docList"></div>
 		
@@ -51,7 +51,7 @@
       $("#account").evently("account", app);
       //$.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
 			$("#saveForm").evently("saveForm", app);
-			$(".btnPullDown").evently("btnPullDown", app);
+			$(".topPanelToggler").evently("topPanelToggler", app);
 			$("#docList").evently("docList", app);
 			$("#content").evently("content", app);
     });
