@@ -1,6 +1,6 @@
 # CouchWriter 0.1
 
-An online & simple text editor, made for pure text writers.
+**An online & simple text editor, made for pure text writers.**
 
 Currently text edition is based on your browser's `contenteditable` feature, which only allows to write paragraphs, without formatting. 
 
@@ -9,6 +9,7 @@ Currently text edition is based on your browser's `contenteditable` feature, whi
 ## Installation
 
 CouchWriter is a [couchapp](http://github.com/couchapp/couchapp). Grab yourself a [CouchDB](http://couchdb.apache.org/) instance and push this app into it !
+ 
 
 * * *
 
