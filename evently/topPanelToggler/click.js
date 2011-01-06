@@ -1,4 +1,7 @@
 function (event) {
+	if ( event.target != this)
+		return;
+	
 	event.preventDefault();
 	
 	if ( !$$('#top').baseHeight ) {
@@ -8,31 +11,22 @@ function (event) {
 	var futureHeight,futureOverflow;
 	
 	if ( $$(this).isDown ) {
-		$$(this).isDown  = false;
-		futureHeight   = $$('#top').baseHeight
-		futureOverflow = 'hidden';
-		
-		$("#top").die('click');
-		
+		$$(this).isDown = false;
+		futureHeight    = $$('#top').baseHeight
+		futureOverflow  = 'hidden';
 	} else {
-		$$(this).isDown  = true;
-		futureHeight   = '80%';
-		futureOverflow = 'auto';
+		$$(this).isDown = true;
+		futureHeight    = '80%';
+		futureOverflow  = 'auto';
 	}
 	
 	$('#top').css('overflow', futureOverflow);
 	
 	$('#top').animate({'height':futureHeight}, 'slow', "swing", function(){
-		$('.btnPullDown').each(function() {
-			$(this).trigger('toggle');
+		$('a.topPanelToggler').each(function() {
+			$(this).html(
+				$$(this).isDown ? '^' : 'v' 
+			);
 		});
-		
-		if ( $$('.btnPullDown').isDown ) {
-			$("#top").live('click', function (event) {
-				if ( event.target == this ) {
-					$('.btnPullDown').first().trigger('click');
-				}
-			});
-		}
 	});
 }
