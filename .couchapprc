@@ -1,9 +1,0 @@
-{
-    "env":
-    {
-        "default":
-        {
-            "db": "http://marty:lalalou@localhost:5984/couchwriter"
-        }
-    }
-}
