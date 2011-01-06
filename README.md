@@ -4,8 +4,6 @@
 
 Currently text edition is based on your browser's `contenteditable` feature, which only allows to write paragraphs, without formatting. 
 
-* * *
-
 ## Installation
 
 CouchWriter is a [couchapp](http://github.com/couchapp/couchapp). Grab yourself a [CouchDB](http://couchdb.apache.org/) instance and push this app into it.
