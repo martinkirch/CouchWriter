@@ -10,7 +10,6 @@
 	<body>
 
 		<div id="top" class="topPanelToggler">
-			<div id="account"></div>
 
 			<h1>CouchWriter</h1>
 			
@@ -23,10 +22,7 @@
 			<div id="docList"></div>
 		
 			<div id="about">
-				This will be CouchWriter :
-				<a href="http://www.aloha-editor.com/">Aloha editor</a> brought in a
-				<a href="http://couchapp.org">couchapp</a>
-				by Martin Kirchgessner &copy; 2010-2011
+				<a href="">About</a>
 			</div>
 		</div>
 
@@ -37,7 +33,9 @@
 
 		<div id="page">
 			<div id="content" contenteditable="true">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<p>
+					Edit me!
+				</p>
 			</div>
 		</div>
 
@@ -48,12 +46,16 @@
 	
   <script type="text/javascript" charset="utf-8">
     $.couch.app(function(app) {
-      $("#account").evently("account", app);
+      //$("#account").evently("account", app);
       //$.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
+			$("#docList").evently("docList", app);
 			$("#saveForm").evently("saveForm", app);
 			$(".topPanelToggler").evently("topPanelToggler", app);
-			$("#docList").evently("docList", app);
+			$("#about").evently("about", app);
 			$("#content").evently("content", app);
+			
+			//
+			$("#content").get(0).execCommand("insertBrOnReturn", false, false);
     });
   </script>
 
