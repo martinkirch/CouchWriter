@@ -9,7 +9,7 @@
 	</head>
 	<body>
 
-		<div id="top" class="topPanelToggler">
+		<header class="topPanelToggler">
 
 			<h1>CouchWriter</h1>
 			
@@ -24,7 +24,7 @@
 			<div id="about">
 				<a href="">About</a>
 			</div>
-		</div>
+		</header>
 
 		<div id="sidebar">
 			<div id="profile" style="display:none"></div>
@@ -32,11 +32,11 @@
 		</div>
 
 		<div id="page">
-			<div id="content" contenteditable="true">
+			<article contenteditable="true">
 				<p>
 					Edit me!
 				</p>
-			</div>
+			</article>
 		</div>
 
 	</body>
@@ -52,10 +52,10 @@
 			$("#saveForm").evently("saveForm", app);
 			$(".topPanelToggler").evently("topPanelToggler", app);
 			$("#about").evently("about", app);
-			$("#content").evently("content", app);
+			$("article").evently("article", app);
 			
 			//
-			$("#content").get(0).execCommand("insertBrOnReturn", false, false);
+			$("article").get(0).execCommand("insertBrOnReturn", false, false);
     });
   </script>
 

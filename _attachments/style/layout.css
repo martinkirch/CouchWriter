@@ -14,15 +14,15 @@ body {
 	width : 30em;
 }
 
-#content {
+article {
 	cursor : text;
 }
 
-#content p {
+article p {
 	text-indent : 1em;
 }
 
-#top {
+header {
 	width:100%;
 	position: fixed;
 	left: 0;
@@ -33,7 +33,7 @@ body {
 	overflow:hidden;
 }
 
-#top h1 {
+header h1 {
 	padding : 0.1em 1em;
 	margin: 0;
 	text-align : left;
@@ -42,7 +42,7 @@ body {
 	left:0;
 }
 
-#top .btnPullDown {
+header .btnPullDown {
 	display:none;
 	
 	margin-left:10%;
@@ -53,18 +53,19 @@ body {
 	color:black;
 }
 
-#top .btnPullDown:hover {
+header .btnPullDown:hover {
 	background:black;
 	color:white;
 }
 
-#top:hover .btnPullDown {
+header:hover .btnPullDown {
 	display:inline;
 }
 
 #docList {
 	text-align:left;
 	padding:1em;
+	clear: both;
 }
 
 #saveForm {
@@ -74,10 +75,6 @@ body {
 #saveForm form {
 	margin : 0 auto;
 	display:inline;
-}
-
-#docList {
-	clear: both;
 }
 
 #about {

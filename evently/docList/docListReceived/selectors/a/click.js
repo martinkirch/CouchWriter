@@ -1,5 +1,5 @@
 function (e) {
 	e.preventDefault();
 	
-	$("#content").trigger('load', [$(this).html()]);
+	$("article").trigger('load', [$(this).html()]);
 }

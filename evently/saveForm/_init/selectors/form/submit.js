@@ -3,12 +3,12 @@ function (event) {
 	
 	var doc = {
     created_at : new Date(),
-		content : $('#content').html(),
+		content : $('article').html(),
 		_id : $('input[type=text]').val()
   };
 
-	if ($$('#content')._rev) {
-		doc._rev = $$('#content')._rev;
+	if ($$('article')._rev) {
+		doc._rev = $$('article')._rev;
 	}
 
   $$(this).app.db.saveDoc(doc, {
@@ -19,7 +19,7 @@ function (event) {
 				time: 3000
 			});
 		
-			$$('#content')._rev = data.rev;
+			$$('article')._rev = data.rev;
     }, 
 		error : function(status, error, reason) {
 			$.gritter.add({

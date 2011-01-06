@@ -2,6 +2,10 @@
 
 <p class="subtitle">Click to open</p>
 
-{{#rows}}
-<a href="../../{{id}}">{{id}}</a>
-{{/rows}}
+<nav>
+	<ul>
+		{{#rows}}
+		<li><a href="../../{{id}}">{{id}}</a></li>
+		{{/rows}}
+	</ul>
+</nav>

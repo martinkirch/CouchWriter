@@ -17,27 +17,27 @@ h1, h2, form, fieldset, input, label {
 	font-weight : normal;
 }
 
-#content {
+article {
 	font-family : Garamond, ‘Hoefler Text’, ‘Times New Roman’, Times, serif;
 	font-size:120%;
 }
 
-#top a {
+header a {
 	color:#444;
 	text-decoration:none;
 }
 
-#top a:hover {
+header a:hover {
 	color:black;
 }
 
-#top form input[type=text] {
+header form input[type=text] {
   border: 1px solid #ccc;
   font-size: 100%;
   padding: 0.1em;
 }
 
-#top form input[type=submit] {
+header form input[type=submit] {
 	border: 1px solid #ccc;
 	background : #ddd;
   font-size: 100%;
@@ -55,12 +55,16 @@ h1, h2, form, fieldset, input, label {
 	text-indent:2em;
 }
 
-#docList a {
+nav li {
+	list-style:none;
+}
+
+nav a {
 	display:block;
 	padding:0.1em 0.5em;
 } 
 
-#docList a:hover {
+nav a:hover {
 	background:#888;
 	color:white;
 }

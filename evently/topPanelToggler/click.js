@@ -4,15 +4,15 @@ function (event) {
 	
 	event.preventDefault();
 	
-	if ( !$$('#top').baseHeight ) {
-		$$('#top').baseHeight = $('#top').css('height');
+	if ( !$$('header').baseHeight ) {
+		$$('header').baseHeight = $('header').css('height');
 	}
 	
 	var futureHeight,futureOverflow;
 	
 	if ( $$(this).isDown ) {
 		$$(this).isDown = false;
-		futureHeight    = $$('#top').baseHeight
+		futureHeight    = $$('header').baseHeight
 		futureOverflow  = 'hidden';
 	} else {
 		$$(this).isDown = true;
@@ -20,9 +20,9 @@ function (event) {
 		futureOverflow  = 'auto';
 	}
 	
-	$('#top').css('overflow', futureOverflow);
+	$('header').css('overflow', futureOverflow);
 	
-	$('#top').animate({'height':futureHeight}, 'slow', "swing", function(){
+	$('header').animate({'height':futureHeight}, 'slow', "swing", function(){
 		$('a.topPanelToggler').each(function() {
 			$(this).html(
 				$$(this).isDown ? '^' : 'v' 
