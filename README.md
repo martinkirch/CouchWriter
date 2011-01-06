@@ -9,11 +9,8 @@ Currently text edition is based on your browser's `contenteditable` feature, whi
 ## Installation
 
 CouchWriter is a [couchapp](http://github.com/couchapp/couchapp). Grab yourself a [CouchDB](http://couchdb.apache.org/) instance and push this app into it !
- 
 
 * * *
-
-### License
 
 Copyright <span>&copy;</span> 2011 Martin Kirchgessner.
 
