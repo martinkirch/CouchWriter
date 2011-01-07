@@ -1,5 +1,5 @@
 {
     "name": "CouchWriter",
-    "description": "CouchWriter is an online text editor, backed by CouchDB and Aloha",
+    "description": "An online & simple text editor, made for pure text writers.",
 		"version": "0.1"
 }
