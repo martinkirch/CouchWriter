@@ -4,7 +4,8 @@ function (event) {
 	var doc = {
     created_at : new Date(),
 		content : $('article').html(),
-		_id : $('input[type=text]').val()
+		_id : $('input[type=text]').val(),
+		type : 'article'
   };
 
 	if ($$('article')._rev) {
