@@ -21,13 +21,6 @@ function (event) {
 			});
 		
 			$$('article')._rev = data.rev;
-    }, 
-		error : function(status, error, reason) {
-			$.gritter.add({
-				title: 'ERROR',
-				text: "The document could not be saved : " + reason,
-				time: 3000
-			});
 		}
   });
 };
