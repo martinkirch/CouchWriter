@@ -19,8 +19,15 @@
 			
 			<a class="topPanelToggler btnPullDown" href="">v</a>
 			
-			<div id="docList"></div>
-		
+			<div class="clearer"></div>
+			
+			<div class="rightColumn">
+				<div id="tagList"></div>
+			</div>
+			<div class="leftColumn">
+				<div id="docList"></div>
+			</div>
+			
 			<div id="about">
 				<a href="">About</a>
 			</div>
@@ -39,6 +46,11 @@
 			</article>
 		</div>
 
+		<form id="tags">
+			<label for="tagsInput">Tags : </label>
+			<input type="text" id="tagsInput" />
+		</form>
+		
 	</body>
 
 	<script src="vendor/couchapp/loader.js"></script>
@@ -49,6 +61,7 @@
       //$("#account").evently("account", app);
       //$.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
 			$("#docList").evently("docList", app);
+			$("#tagList").evently("tagList", app);
 			$("#saveForm").evently("saveForm", app);
 			$(".topPanelToggler").evently("topPanelToggler", app);
 			$("#about").evently("about", app);

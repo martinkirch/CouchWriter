@@ -11,6 +11,8 @@ function (event) {
 	if ($$('article')._rev) {
 		doc._rev = $$('article')._rev;
 	}
+	
+	doc.tags = $.map($('#tagsInput').val().split(','), function(tag) { return tag.trim().toLowerCase(); });
 
   $$(this).app.db.saveDoc(doc, {
     success : function(data) {

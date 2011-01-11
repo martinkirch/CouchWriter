@@ -22,6 +22,21 @@ article p {
 	text-indent : 1em;
 }
 
+#tags {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	padding: 0.3em 1em;
+	text-align: left;
+	width: 80%;
+	background: white;
+}
+
+#tags input {
+	border: none;
+	width: 90%;
+}
+
 header {
 	width:100%;
 	position: fixed;
@@ -62,10 +77,24 @@ header:hover .btnPullDown {
 	display:inline;
 }
 
-#docList {
+.clearer {
+	clear:both;
+}
+
+.leftColumn {
+	clear: left;
+	width: 50%;
+}
+
+.rightColumn {
+	clear: right;
+	float: right;
+	width: 50%;
+}
+
+#docList, #tagList {
 	text-align:left;
-	padding:1em;
-	clear: both;
+	margin:1em;
 }
 
 #saveForm {
@@ -78,6 +107,7 @@ header:hover .btnPullDown {
 }
 
 #about {
+	clear: both;
 	padding:1em;
 	text-align : left;
 }

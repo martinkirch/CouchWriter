@@ -22,6 +22,10 @@ article {
 	font-size:120%;
 }
 
+#tags input {
+	font-size: 100%;
+}
+
 header a {
 	color:#444;
 	text-decoration:none;
@@ -44,15 +48,9 @@ header form input[type=submit] {
   padding: 0.1em;
 }
 
-#docList .title {
+#docList .title, #tagList .title {
 	font-size:2em;
-	letter-spacing:0.2em;
-}
-
-#docList .subtitle {
-	color:#ccc;
-	font-style:italic;
-	text-indent:2em;
+	letter-spacing:-0.07em; /* Hello James Bond */
 }
 
 nav li {
