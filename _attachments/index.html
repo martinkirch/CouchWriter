@@ -20,7 +20,10 @@
 			
 			<a class="topPanelToggler btnPullDown" href="">v</a>
 			
-			<div id="saveForm"></div>
+			<div id="saveForm">
+				<input type="button" value="New" class="new" />
+				<form></form>
+			</div>
 			
 			<a class="topPanelToggler btnPullDown" href="">v</a>
 			
@@ -67,7 +70,7 @@
       //$.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
 			$("#docList").evently("docList", app);
 			$("#tagList").evently("tagList", app);
-			$("#saveForm").evently("saveForm", app);
+			$("form","#saveForm").evently("saveForm", app);
 			$(".topPanelToggler").evently("topPanelToggler", app);
 			$("#about").evently("about", app);
 			$("article").evently("article", app);
