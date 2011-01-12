@@ -46,7 +46,7 @@ header form input[type=text] {
   padding: 0.1em;
 }
 
-header form input[type=submit] {
+header form input[type=submit], header form input[type=button] {
 	border: 1px solid #ccc;
 	background : #ddd;
   font-size: 100%;
