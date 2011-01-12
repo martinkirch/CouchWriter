@@ -1,16 +1,29 @@
 function (event, docId) {
+	
+	if (docId == undefined) {
+		docId = $$(this)._id;
+		
+		if (docId == undefined) {
+			return;
+		}
+	} else {
+		$$(this)._id = docId;
+	}
+	
 	var doc = {
     created_at : new Date(),
-		content : $('article').html(),
+		content : $(this).html(),
 		_id : docId,
 		type : 'article'
   };
 
-	if ($$('article')._rev) {
-		doc._rev = $$('article')._rev;
+	if ($$(this)._rev) {
+		doc._rev = $$(this)._rev;
 	}
 	
 	doc.tags = $.map($('#tagsInput').val().split(','), function(tag) { return tag.trim().toLowerCase(); });
+
+	var self = this;
 
   $$(this).app.db.saveDoc(doc, {
     success : function(data) {
@@ -20,7 +33,7 @@ function (event, docId) {
 				time: 3000
 			});
 		
-			$$('article')._rev = data.rev;
+			$$(self)._rev = data.rev;
 		}
   });
 }
