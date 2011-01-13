@@ -53,6 +53,10 @@ header form input[type=submit], header form input[type=button] {
   padding: 0.1em;
 }
 
+.leftColumn {
+	border-right: 4px dotted #ccc;
+}
+
 #docList .title, #tagList .title {
 	font-size:2em;
 	letter-spacing:-0.07em; /* Hello James Bond */
