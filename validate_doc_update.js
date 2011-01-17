@@ -23,6 +23,15 @@ function (newDoc, existingDoc, userCtx) {
 		case "article" :
 			validate(newDoc.created_at, "Creation timestamp is not set.");
 			validate(newDoc.content,    "Article's content is missing.");
+			
+			if (newDoc.tags) {
+				for (var i = newDoc.tags.length - 1; i >= 0; i--){
+					if (!newDoc.tags[i].match(/^[a-z0-9 \-',\.\"\:_]+$/i)) {
+						throw({unauthorized : "Tags must be made of letters, numbers, spaces and : _ - ' \. \" ,"});
+					}
+				};
+			}
+			
 			break;
 		default :
 			throw({forbidden : "Invalid \"type\" field."});

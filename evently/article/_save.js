@@ -10,7 +10,15 @@ function (event, docId, doNotice) {
 		doc._rev = $$(this)._rev;
 	}
 	
-	doc.tags = $.map($('#tagsInput').val().split(','), function(tag) { return tag.trim().toLowerCase(); });
+	rawTags = $('#tagsInput').val();
+	
+	if (rawTags.trim().length == 0) {
+		doc.tags = [];
+	} else {
+		doc.tags = $.map( rawTags.split(','), function(tag) {
+			return tag.trim().toLowerCase(); 
+		});
+	}
 
 	var self = this;
 
