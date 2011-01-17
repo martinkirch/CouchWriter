@@ -10,6 +10,11 @@ function (newDoc, existingDoc, userCtx) {
 		throw({unauthorized : "You must be logged in to save something."});
 	}
 	
+	// this one should be prevented by "urlFriendly" handlers
+	if (!newDoc._id.match(/^[a-z0-9 \-',\.\"\:_]+$/i)) {
+		throw({unauthorized : "Document identifiers must be made of letters, numbers, spaces and : _ - ' \. \" ,"});
+	}
+	
 	if (existingDoc && newDoc.type != existingDoc.type) {
 		throw({forbidden : "Document's \"type\" field can't be changed."});
 	}
