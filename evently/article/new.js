@@ -1,6 +1,6 @@
 function (){
 	$(this).html("<p>Edit me!</p>");
-	$('#tagsInput').val('');
+	$('#keywordsInput').val('');
 	
 	$$(this)._rev = undefined;
 	$$(this)._id = undefined;

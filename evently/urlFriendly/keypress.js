@@ -11,7 +11,7 @@ function (event) {
 		event.preventDefault();
 		$.gritter.add({
 			title: 'Information',
-			text: "Article identifiers and tags must be made of letters, numbers, spaces and : _ - ' \. \" ,",
+			text: "Article identifiers and keywords must be made of letters, numbers, spaces and : _ - ' \. \" ,",
 			time: 3000
 		});
 	}
