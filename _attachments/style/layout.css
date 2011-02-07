@@ -28,7 +28,7 @@ article p {
 	text-indent : 1em;
 }
 
-#tags {
+#keywords {
 	position: fixed;
 	left: 0;
 	bottom: 0;
@@ -38,7 +38,7 @@ article p {
 	background: white;
 }
 
-#tags input {
+#keywords input {
 	border: none;
 	width: 90%;
 }
@@ -98,7 +98,7 @@ header:hover .btnPullDown {
 	width: 50%;
 }
 
-#docList, #tagList {
+#articlesBrowser, #keywordsBrowser {
 	text-align:left;
 	margin:1em;
 }

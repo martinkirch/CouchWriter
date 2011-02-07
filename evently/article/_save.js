@@ -10,13 +10,13 @@ function (event, docId, doNotice) {
 		doc._rev = $$(this)._rev;
 	}
 	
-	rawTags = $('#tagsInput').val();
+	rawKeywords = $('#keywordsInput').val();
 	
-	if (rawTags.trim().length == 0) {
-		doc.tags = [];
+	if (rawKeywords.trim().length == 0) {
+		doc.keywords = [];
 	} else {
-		doc.tags = $.map( rawTags.split(','), function(tag) {
-			return tag.trim().toLowerCase(); 
+		doc.keywords = $.map( rawKeywords.split(','), function(keyword) {
+			return keyword.trim().toLowerCase(); 
 		});
 	}
 

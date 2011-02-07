@@ -16,9 +16,9 @@ function (newDoc, existingDoc, userCtx) {
 			
 			// forget paragraphs...
 			if (content.charAt(pos) != 'p') {
-				var tag = content.substr(pos, 3);
+				var keyword = content.substr(pos, 3);
 				
-				switch (tag) {
+				switch (keyword) {
 					case "scr": // script
 					case "!--": // comments
 					case "app": // applet
@@ -59,10 +59,10 @@ function (newDoc, existingDoc, userCtx) {
 			validate(newDoc.created_at, "Creation timestamp is not set.");
 			validate(newDoc.content,    "Article's content is missing.");
 			
-			if (newDoc.tags) {
-				for (var i = newDoc.tags.length - 1; i >= 0; i--){
-					if (!newDoc.tags[i].match(/^[a-z0-9 \-',\.\"\:_]+$/i)) {
-						throw({unauthorized : "Tags must be made of letters, numbers, spaces and : _ - ' \. \" ,"});
+			if (newDoc.keywords) {
+				for (var i = newDoc.keywords.length - 1; i >= 0; i--){
+					if (!newDoc.keywords[i].match(/^[a-z0-9 \-',\.\"\:_]+$/i)) {
+						throw({unauthorized : "Keywords must be made of letters, numbers, spaces and : _ - ' \. \" ,"});
 					}
 				};
 			}

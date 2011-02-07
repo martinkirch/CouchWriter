@@ -27,7 +27,7 @@ article {
 	font-size:120%;
 }
 
-#tags input {
+#keywords input {
 	font-size: 100%;
 }
 
@@ -57,7 +57,7 @@ header form input[type=submit], header form input[type=button] {
 	border-right: 4px dotted #ccc;
 }
 
-#docList .title, #tagList .title {
+#articlesBrowser .title, #keywordsBrowser .title {
 	font-size:2em;
 	letter-spacing:-0.07em; /* Hello James Bond */
 }

@@ -4,7 +4,7 @@ function (e) {
 	  limit : 10,
 		success : function(data) {
 			data.title = 'Recent articles';
-			$("#docList").trigger('load', [data]);
+			$("#articlesBrowser").trigger('load', [data]);
 		}
 	});
 }

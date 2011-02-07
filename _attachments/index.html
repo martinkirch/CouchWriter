@@ -27,10 +27,10 @@
 			<div class="clearer"></div>
 			
 			<div class="rightColumn">
-				<div id="tagList"></div>
+				<div id="keywordsBrowser"></div>
 			</div>
 			<div class="leftColumn">
-				<div id="docList"></div>
+				<div id="articlesBrowser"></div>
 			</div>
 			
 			<div id="about">
@@ -51,9 +51,9 @@
 			</article>
 		</div>
 
-		<form id="tags">
-			<label for="tagsInput">Tags : </label>
-			<input type="text" id="tagsInput" class="urlFriendly"/>
+		<form id="keywords">
+			<label for="keywordsInput">Keywords : </label>
+			<input type="text" id="keywordsInput" class="urlFriendly"/>
 		</form>
 		
 	</body>
@@ -65,8 +65,8 @@
     $.couch.app(function(app) {
       //$("#account").evently("account", app);
       //$.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
-			$("#docList").evently("docList", app);
-			$("#tagList").evently("tagList", app);
+			$("#articlesBrowser").evently("articlesBrowser", app);
+			$("#keywordsBrowser").evently("keywordsBrowser", app);
 			$("#saveForm").evently("saveForm", app);
 			$(".topPanelToggler").evently("topPanelToggler", app);
 			$("#about").evently("about", app);
