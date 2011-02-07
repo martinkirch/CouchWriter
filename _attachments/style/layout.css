@@ -34,13 +34,10 @@ article p {
 	bottom: 0;
 	padding: 0.3em 1em;
 	text-align: left;
-	width: 80%;
-	background: white;
 }
 
 #keywords input {
 	border: none;
-	width: 90%;
 }
 
 header {
