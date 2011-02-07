@@ -13,6 +13,6 @@ CouchWriter is a [couchapp](http://github.com/couchapp/couchapp). Grab yourself 
 Embedded libraries : 
 
 - Gritter for jQuery - Copyright <span>&copy;</span> 2009 Jordan Boesch
-- Couchapp - Copyright <span>&copy;</span> 2008, 2010 Benoît Chesneau and J Chris Anderson
+- Couchapp - Copyright <span>&copy;</span> 2008, 2011 Benoît Chesneau and J Chris Anderson
 
-The couchapp itself (the "evently" folder) is under copyright <span>&copy;</span> 2011 Martin Kirchgessner and licensed under a [Creative Commons Attribution 3.0 Unported License.](http://creativecommons.org/licenses/by/3.0/)
+CouchWriter has been created by Martin Kirchgessner and is released under the MIT license.
