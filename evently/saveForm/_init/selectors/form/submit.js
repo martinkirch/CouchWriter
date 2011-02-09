@@ -11,5 +11,17 @@ function (event) {
 		return;
 	}
 	
-	$('article').trigger('save', id);
+	$('article').one('saved', function (e, data) {
+		if (data.ok) {
+			$.gritter.add({
+				title: 'Saved!',
+				text: '"' + data.id +'" has been saved.',
+				time: 3000
+			});
+		} else {
+			alert("The document could not be saved: " + data.reason); 
+		}
+	});
+	
+	$('article').trigger('save', [id]);
 };

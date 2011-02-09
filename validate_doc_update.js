@@ -45,6 +45,11 @@ function (newDoc, existingDoc, userCtx) {
 		throw({unauthorized : "You must be logged in to save something."});
 	}
 	
+	// deletions
+	if (newDoc._deleted) {
+		return;
+	}
+	
 	// this one should be prevented by "urlFriendly" handlers
 	if (!newDoc._id.match(/^[a-z0-9 \-',\.\"\:_]+$/i)) {
 		throw({unauthorized : "Document identifiers must be made of letters, numbers, spaces and : _ - ' \. \" ,"});

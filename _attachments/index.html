@@ -33,9 +33,7 @@
 				<div id="articlesBrowser"></div>
 			</div>
 			
-			<div id="about">
-				<a href="">About</a>
-			</div>
+			<div id="about"></div>
 		</header>
 
 		<div id="sidebar">
@@ -51,10 +49,7 @@
 			</article>
 		</div>
 
-		<form id="keywords">
-			<label for="keywordsInput">Keywords : </label>
-			<input type="text" id="keywordsInput" class="urlFriendly"/>
-		</form>
+		<div id="keywordsEditor"></div>
 		
 	</body>
 
@@ -72,6 +67,7 @@
 			$("#about").evently("about", app);
 			$("article").evently("article", app);
 			$(".urlFriendly").evently("urlFriendly", app);
+			$("#keywordsEditor").evently("keywordsEditor", app);
     });
   </script>
 

@@ -1,38 +1,25 @@
-function (event, docId, doNotice) {
+function (event, docId) {
 	var doc = {
     created_at : new Date(),
 		content : $(this).html(),
 		_id : docId,
-		type : 'article'
+		type : 'article',
+		keywords : $$(this).keywords
   };
 
 	if ($$(this)._rev) {
 		doc._rev = $$(this)._rev;
 	}
 	
-	rawKeywords = $('#keywordsInput').val();
-	
-	if (rawKeywords.trim().length == 0) {
-		doc.keywords = [];
-	} else {
-		doc.keywords = $.map( rawKeywords.split(','), function(keyword) {
-			return keyword.trim().toLowerCase(); 
-		});
-	}
-
 	var self = this;
 
   $$(this).app.db.saveDoc(doc, {
     success : function(data) {
-			if (doNotice) {
-				$.gritter.add({
-					title: 'Saved!',
-					text: '"' + data.id +'" has been saved.',
-					time: 3000
-				});
-			}
-		
 			$$(self)._rev = data.rev;
+			$(self).trigger('saved', [data]);
+		},
+		error : function(status, error, reason) {
+			$(self).trigger('saved', [{status:status, error:error, reason:reason}]);
 		}
   });
 }

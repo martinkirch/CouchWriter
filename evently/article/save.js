@@ -1,28 +1,15 @@
-function (event, options) {
-	var docId;
-	var doNotice = true;
+function (event, docId) {
 	
-	if (options != null) {
-		if (typeof(options) != 'object') {
-			docId = "" + options;
-		} else {
-			if (options._id)
-				docId = options._id;
-			
-			if (options.doNotice != undefined)
-				doNotice = options.doNotice;
-		}
-	}
-	
-	if (docId == undefined) {
+	if (docId == null) {
 		docId = $$(this)._id;
 		
-		if (docId == undefined) {
+		if (docId == null) {
 			return;
 		}
 	} else {
+		docId = "" + docId;
 		$$(this)._id = docId;
 	}
 	
-	$(this).trigger('_save', [docId, doNotice]);
+	$(this).trigger('_save', [docId]);
 }

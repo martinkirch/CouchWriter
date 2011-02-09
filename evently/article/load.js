@@ -6,8 +6,9 @@ function (event, docId) {
 			$(self).html(data.content);
 			$$(self)._rev = data._rev;
 			$$(self)._id = docId;
-			$('input[name=id]', '#saveForm').val(docId);
-			$('#keywordsInput').val(data.keywords ? data.keywords.join(', ') : '');
+			$$(self).keywords = data.keywords ? data.keywords : [];
+						
+			$(self).trigger('loaded', $$(self));
     }
   });
 }
