@@ -28,20 +28,13 @@ article p {
 	text-indent : 1em;
 }
 
-#keywordsEditor {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	padding: 0.3em 1em;
-	text-align: left;
-}
-
 #keywordsEditor input {
 	border: none;
 }
 
 header {
 	width:100%;
+	z-index:100;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -120,12 +113,24 @@ header:hover .btnPullDown {
 	border: none;
 }
 
-#sidebar {
-	width : 200px;
+#toolbox {
+	width:200px;
+	height:1.4em;
+	overflow:hidden;
+	
 	position:fixed;
 	top:100px;
-	right:20px;
-	float:right;
+	left:20px;
+	
+	text-align:left;
+}
+
+#toolbox:hover {
+	height:auto;
+}
+
+#toolbox h2 {
+	font-size:100%;
 }
 
 #account {

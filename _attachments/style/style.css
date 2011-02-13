@@ -80,3 +80,19 @@ nav a:hover {
 	color:#ccc;
 	font-size:75%;
 }
+
+#toolbox {
+	background:white;
+}
+
+#toolbox h2 {
+	color: #ccc;
+	text-transform: uppercase;
+	letter-spacing:-0.07em;
+	padding:0.1em 1em;
+}
+
+#toolbox:hover h2 {
+	color: white;
+	background:black;
+}
