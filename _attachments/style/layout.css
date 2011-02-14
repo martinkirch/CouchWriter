@@ -28,10 +28,6 @@ article p {
 	text-indent : 1em;
 }
 
-#keywordsEditor input {
-	border: none;
-}
-
 header {
 	width:100%;
 	z-index:100;
@@ -129,7 +125,7 @@ header:hover .btnPullDown {
 	height:auto;
 }
 
-#toolbox h2 {
+#toolbox h2, #toolbox h3 {
 	font-size:100%;
 }
 

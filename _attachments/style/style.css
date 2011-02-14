@@ -18,7 +18,7 @@ a:hover {
 	text-decoration : none;
 }
 
-h1, h2, form, fieldset, input, label {
+h1, h2, h3, form, fieldset, input, label {
 	font-weight : normal;
 }
 
